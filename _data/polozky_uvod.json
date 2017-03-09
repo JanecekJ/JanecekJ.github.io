@@ -1,0 +1,21 @@
+[{
+	"nadpis":"O mne",
+  	"obsah":"Da sa toho o mne povedat vela.",
+  	"link":"/O_mne/"
+},{
+	"nadpis":"Ja, programovanie a pocitacove hry",
+  	"obsah":"Ked som bol maly dostal som NHL 2000. To bola hra.Programovat som zacal na strednej skole, a tam ma to natolko oslovilo ze som sa vybral na FIIT.",
+	"link":"/Programovanie/"
+},{
+	"nadpis":"Moje projekty",
+  	"obsah":"Tu si mozete pozriet niektore moje projekty.",
+  	"link":"/Projekty/"
+},{
+	"nadpis":"Priroda je moj kamarat",
+  	"obsah":"Rad chodim do lesa, do hor na tury a tak.",
+  	"link":"/Priroda/"
+},{
+	"nadpis":"Moj blog",
+  	"obsah":"Tu si mozte precitat niektore moje prispevky k temam aktualnym aj neaktualnym.",
+  	"link":"/Blog/"
+}]
