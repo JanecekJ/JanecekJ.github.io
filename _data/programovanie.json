@@ -1,0 +1,43 @@
+[{
+	"nadpis":"Počítačové hry",
+	"popis":"Hranie sa na počítači som si vždy užíval. Bol a je to pre mňa spôsob relaxu. Aj keď niekedy ma vie taká DotA poriadne naštvať.",
+	"link":"hry",
+	"prispevky":[{
+					"name":"DotA 2",
+					"popis":"Prvý krát som ju hral asi pred 4 až 5 rokmi. Odvtedy som pri nej strávil veľa hodín.",
+					"img":"/images/hriby.jpg",
+					"rating":"8"
+				},{
+					"name":"Witcher 2",
+					"popis":"Nedávno som túto hru opäť prešiel.",
+					"img":"/images/hriby.jpg",
+					"rating":"7"
+				}]
+},{
+	"nadpis":"Programovacie jazyky",
+	"popis":"Tieto programovacie jazyky do ovládam. Zoradené sú zostupne podľa miery zručnosti.",
+	"link":"jazyky",
+	"prispevky":[{
+					"name":"Java",
+					"popis":"Objektovo orientovaný jazyk, ktorý je ako oheň. Hreje ale vie aj popáliť.",
+					"img":"/images/vyhlad.jpg",
+					"rating":"7"
+				},{
+					"name":"C",
+					"popis":"Prvý programovací jazyk ktorý som sa učil na vysokej škole.",
+					"img":"/images/kvety.jpg",
+					"rating":"6"
+				}]
+},{
+	"nadpis":"Hardware",
+	"popis":"Hardwarovo nie som až taký zručný ale mám isté znalosti.",
+	"link":"hardware",
+	"prispevky":[{
+					"name":"Zostavovanie PC",
+					"popis":"V lete som sa snažil zostaviť PC. Bolo by to bezproblémové, keby niektorá súčiastka nebola chybná.",
+					"img":"/images/mohyla.jpg",
+					"rating":"4"
+				}]
+}
+]
+
