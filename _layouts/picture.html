@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<title>{{page.title}}</title>
+</head>
+<body>
+	<div>
+		{%include topBar.html%}
+	</div>
+	<div class="container">
+		{{content}}
+	</div>
+	<ul class = "media-list" >
+		<div class="container">
+			<li class="media" style="margin-top:30px; margin-bottom:30px">
+				<div class="media-body">
+					<a name="hriby"></a>
+					<h4 class="media-heading">{{page.hribyNadpis}}</h4>
+					<p>{{page.hriby}}</p>
+					<ul  class = "media-list" >
+						{% for polozka in site.data.huby %}
+							<li class="media">
+								<div class="media-left">
+									<a href={{polozka.img}}>
+								    	<img class="media-object" src={{polozka.img}} width="100">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">{{polozka.name}}</h4>
+									<p>{{polozka.popis}}</p>			  
+								</div>
+							</li>
+						{% endfor %}			  
+					</ul>
+				</div>
+			</li>
+		</div>
+		<div class="container">
+			<li class="media" style="margin-top:30px; margin-bottom:30px">
+				<div class="media-body">
+					<a name="priroda"></a>
+					<h4 class="media-heading">{{page.prirodaNadpis}}</h4>
+					<p>{{page.priroda}}</p>
+					<ul class = "media-list">
+						{% for polozka in site.data.priroda %}
+							<li class="media">
+								<div class="media-left">
+									<a href={{polozka.img}}>
+								    	<img class="media-object" src={{polozka.img}} width="100">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">{{polozka.name}}</h4>
+									<p>{{polozka.popis}}</p>			  
+								</div>
+							</li>
+						{% endfor %}			  
+					</ul>
+				</div>
+			</li>
+		</div>
+		<div class="container">
+			<li class="media" style="margin-top:30px; margin-bottom:30px">
+				<div class="media-body">
+					<a name="pamiatky"></a>
+					<h4 class="media-heading">{{page.pamiatkyNadpis}}</h4>
+					<p>{{page.pamiatky}}</p>
+					<ul class = "media-list">
+						{% for polozka in site.data.pamiatky %}
+							<li class="media">
+								<div class="media-left">
+									<a href={{polozka.img}}>
+								    	<img class="media-object" src={{polozka.img}} width="100">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">{{polozka.name}}</h4>
+									<p>{{polozka.popis}}</p>			  
+								</div>
+							</li>
+						{% endfor %}			  
+					</ul>
+				</div>
+			</li>
+		</div>	   
+	</ul>
+
+</body>
+</html>
