@@ -1,9 +1,43 @@
 [{
-	"name":"Pekny vyhlad",
-	"popis":"Takyto pekny vyhlad sa da zazit v blizkosti Modry.",
-	"img":"/images/vyhlad.jpg"
+	"nadpis":"Hubarska vasen",
+	"popis":"Velmi rad chodim do lesa. To ticho a pokoj, ktore tam moze clovek zazit je uzasne. Najradsej chodim do lesa na hriby.",
+	"link":"hriby",
+	"prispevky":[{
+					"name":"Hrib smrekovy",
+					"popis":"Aj taketo kusky sa mi v roku 2015 podarilo najst.",
+					"img":"/images/hriby.jpg",
+					"rating":"1"
+				},{
+					"name":"Ulovok",
+					"popis":"Nebolo toho strasne vela ale aj tak potesilo.",
+					"img":"/images/ulovok.jpg",
+					"rating":"1"
+				}]
 },{
-	"name":"Tulipany",
-	"popis":"Ked pride jar, avsetky kvety rozkvitnu.",
-	"img":"/images/kvety.jpg"
-}]
+	"nadpis":"Krasy prirody",
+	"popis":"Priroda je carovne miesto.",
+	"link":"priroda",
+	"prispevky":[{
+					"name":"Pekny vyhlad",
+					"popis":"Takyto pekny vyhlad sa da zazit v blizkosti Modry.",
+					"img":"/images/vyhlad.jpg",
+					"rating":"1"
+				},{
+					"name":"Tulipany",
+					"popis":"Ked pride jar, avsetky kvety rozkvitnu.",
+					"img":"/images/kvety.jpg",
+					"rating":"1"
+				}]
+},{
+	"nadpis":"Kulturne pamiatky slovenska",
+	"popis":"Na Slovenku mame vela hodnotnych, zaujimavych hradov, zamkov kastielov a inych historickych pamiatok. Obcas sa k nejakej vyberiem.",
+	"link":"pamiatky",
+	"prispevky":[{
+					"name":"Mohyla Milara Rastislava Stefanika",
+					"popis":"Moja prva navsteva mohyly. Leto 2015.",
+					"img":"/images/mohyla.jpg",
+					"rating":"1"
+				}]
+}
+]
+
