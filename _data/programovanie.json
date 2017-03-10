@@ -22,15 +22,15 @@
 	"prispevky":[{
 					"name":"Java",
 					"popis":"Objektovo orientovaný jazyk, ktorý je ako oheň. Hreje ale vie aj popáliť.",
-					"img":"/images/vyhlad.jpg",
+					"img":"/images/java.png",
 					"rating":"7",
-					"source":""
+					"source":"http://logos-download.com/10695-java-logo-download.html"
 				},{
 					"name":"C",
 					"popis":"Prvý programovací jazyk ktorý som sa učil na vysokej škole.",
-					"img":"/images/kvety.jpg",
+					"img":"/images/c.png",
 					"rating":"6",
-					"source":""
+					"source":"https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg"
 				}]
 },{
 	"nadpis":"Hardware",
@@ -39,9 +39,9 @@
 	"prispevky":[{
 					"name":"Zostavovanie PC",
 					"popis":"V lete som sa snažil zostaviť PC. Bolo by to bezproblémové, keby niektorá súčiastka nebola chybná.",
-					"img":"/images/mohyla.jpg",
+					"img":"/images/pc.jpg",
 					"rating":"4",
-					"source":""
+					"source":"http://www.westech.sk/hp-110-100ec-desktop-pc-g1620t-4gb-500gb-intel-hd-dvdrw-cr-klv-mys-win8-64bit-2y_d48178.html"
 				}]
 }
 ]
