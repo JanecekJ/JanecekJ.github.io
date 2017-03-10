@@ -6,12 +6,14 @@
 					"name":"Hríb smrekový",
 					"popis":"Aj takéto kúsky sa mi v roku 2015 podarilo nájsť.",
 					"img":"/images/hriby.jpg",
-					"rating":"1"
+					"rating":"1",
+					"source":""
 				},{
 					"name":"Úlovok",
 					"popis":"Nebolo toho strašne veľa, ale aj tak potešilo.",
 					"img":"/images/ulovok.jpg",
-					"rating":"1"
+					"rating":"1",
+					"source":""
 				}]
 },{
 	"nadpis":"Krásy prírody",
@@ -21,12 +23,14 @@
 					"name":"Pekný výhľad",
 					"popis":"Takýto pekný výhľad sa dá zažit v blízkosti Modry.",
 					"img":"/images/vyhlad.jpg",
-					"rating":"1"
+					"rating":"1",
+					"source":""
 				},{
 					"name":"Tulipány",
 					"popis":"Keď príde jar, a všetky kvety rozkvitnú.",
 					"img":"/images/kvety.jpg",
-					"rating":"1"
+					"rating":"1",
+					"source":""
 				}]
 },{
 	"nadpis":"Kultúrne pamiatky Slovenska",
@@ -36,7 +40,8 @@
 					"name":"Mohyla Milana Rastislava Štefánika",
 					"popis":"Moja prvá návšteva mohyly. Leto 2015.",
 					"img":"/images/mohyla.jpg",
-					"rating":"1"
+					"rating":"1",
+					"source":""
 				}]
 }
 ]

@@ -4,35 +4,57 @@ layout: basic
 	<div class="container">
 		{{content}}
 	</div>
-	<ul class = "media-list" >
-		{% for category in site.data[page.address]%}
-		{% assign sorted = category.prispevky | sort_natural: "rating"%}
-		<div class="container">
-			<li class="media" style="margin-top:30px; margin-bottom:30px">
-				<div class="media-body">
-					<a name={{category.link}}></a>
-					<h4 class="media-heading">{{category.nadpis}}</h4>
-					<p>{{category.popis}}</p>
-					<ul  class = "media-list" >	
-						{% for polozka in sorted %}
-							{%if polozka.rating == "0"%}
-								{%break%}
-							{%endif%}
-							<li class="media">
-								<div class="media-left">
-									<a href={{polozka.img}}>
-								    	<img class="media-object" src={{polozka.img}} width="100">
-									</a>
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">{{polozka.name}}</h4>
-									<p>{{polozka.popis}}</p>			  
-								</div>
-							</li>
-						{% endfor %}			  
-					</ul>
+	<div>
+		<ul class = "media-list" >
+			{% assign zdroje = false %}
+			{% for category in site.data[page.address]%}
+				{% assign sorted = category.prispevky | sort_natural: "rating"%}
+				<div class="container">
+					<li class="media" style="margin-top:30px; margin-bottom:30px">
+						<div class="media-body">
+							<a name={{category.link}}></a>
+							<h4 class="media-heading">{{category.nadpis}}</h4>
+							<p>{{category.popis}}</p>
+							<ul  class = "media-list" >	
+								{% for polozka in sorted %}
+									{%if polozka.rating == "0"%}
+										{%break%}
+									{%endif%}
+									{%if polozka.source != "" and zdroje == false%}
+										{%assign zdroje = true%}
+									{%endif%}
+									<li class="media">
+										<div class="media-left">
+											<a href={{polozka.img}}>
+										    	<img class="media-object" src={{polozka.img}} width="100">
+											</a>
+										</div>
+										<div class="media-body">
+											<h4 class="media-heading">{{polozka.name}}</h4>
+											<p>{{polozka.popis}}</p>			  
+										</div>
+									</li>
+								{% endfor %}			  
+							</ul>
+						</div>
+					</li>
 				</div>
-			</li>
+			{%endfor%}	   
+		</ul>
+	</div>
+	{%if zdroje == true %}
+		<div>
+			<h2>Zdroje obrázkov:</h2>
+			<ul>
+				{% for category in site.data[page.address]%}
+					{% for polozka in category.prispevky %}
+						{% if polozka.source != ""%}
+							<li>
+								<a href="{{polozka.source}}">{{polozka.source}}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
+			</ul>	
 		</div>
-		{%endfor%}	   
-	</ul>
+	{%endif%}

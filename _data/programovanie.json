@@ -5,13 +5,15 @@
 	"prispevky":[{
 					"name":"DotA 2",
 					"popis":"Prvý krát som ju hral asi pred 4 až 5 rokmi. Odvtedy som pri nej strávil veľa hodín.",
-					"img":"/images/hriby.jpg",
-					"rating":"8"
+					"img":"/images/Dota_2.png",
+					"rating":"8",
+					"source":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png"
 				},{
 					"name":"Witcher 2",
 					"popis":"Nedávno som túto hru opäť prešiel.",
-					"img":"/images/hriby.jpg",
-					"rating":"7"
+					"img":"/images/Witcher_2.jpg",
+					"rating":"7",
+					"source":"http://witcher.wikia.com/wiki/User_blog:JPulowski/The_Witcher_2:_Patch_1.3_and_new_DLC_available"					
 				}]
 },{
 	"nadpis":"Programovacie jazyky",
@@ -21,12 +23,14 @@
 					"name":"Java",
 					"popis":"Objektovo orientovaný jazyk, ktorý je ako oheň. Hreje ale vie aj popáliť.",
 					"img":"/images/vyhlad.jpg",
-					"rating":"7"
+					"rating":"7",
+					"source":""
 				},{
 					"name":"C",
 					"popis":"Prvý programovací jazyk ktorý som sa učil na vysokej škole.",
 					"img":"/images/kvety.jpg",
-					"rating":"6"
+					"rating":"6",
+					"source":""
 				}]
 },{
 	"nadpis":"Hardware",
@@ -36,7 +40,8 @@
 					"name":"Zostavovanie PC",
 					"popis":"V lete som sa snažil zostaviť PC. Bolo by to bezproblémové, keby niektorá súčiastka nebola chybná.",
 					"img":"/images/mohyla.jpg",
-					"rating":"4"
+					"rating":"4",
+					"source":""
 				}]
 }
 ]
