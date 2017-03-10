@@ -14,7 +14,20 @@
 		</h3>
 	</div>
 	<div class="center-block text-center" >
-		{% include menu.html %}
+		{% for polozka in site.data.polozky_uvod %}
+			<div class="container">
+				<div class="panel panel-default">
+				    <div class="panel-heading">
+				        <a href={{polozka.link}}>{{polozka.nadpis}}</a>
+				    </div>
+				    <div class="panel-body">
+				        <p>
+						{{polozka.obsah}}
+				        </p>
+				    </div>
+				</div>
+			</div>
+		{% endfor %}	
 	</div>
 </body>
 {%include footer.html%}
