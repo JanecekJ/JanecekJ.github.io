@@ -1,0 +1,33 @@
+---
+layout: basic
+---
+	<div class="container">
+		{{content}}
+	</div>
+	<div>
+		{% for category in site.data[page.address]%}
+			<div class="container">
+				<div class="panel panel-default" style="margin-top:30px; margin-bottom:30px">
+					<div class="panel-heading" style="background-color: rgb(242, 244, 88)">
+				    	<h3 class="panel-title text-left">{{category.nadpis}}</h3>
+				    	<h3 class="panel-title text-right">Počet pojektov<span class="badge" style="margin-left: 15px">{{category.prispevky | size}}</span></h3>
+				 	</div>
+				  	<div class="panel-body">
+				    	<p>{{category.popis}}</p>
+				    	{% for polozka in category.prispevky %}
+							<div class="panel panel-default">
+								<div class="panel-heading">
+							    	<h3 class="panel-title">{{polozka.name}}</h3>
+							 	</div>
+							  	<div class="panel-body">
+							    	<p>{{polozka.popis}}</p>
+							    	<button href="{{polozka.code}}">Kód</button>
+							    	<button href="{{polozka.doc}}">Dokumentácia</button>
+							  	</div>
+							</div>
+						{% endfor %}
+				  	</div>
+				</div>
+			</div>
+		{%endfor%}	   
+	</div>
