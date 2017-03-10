@@ -30,6 +30,8 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jemoji
+  - jekyll-email-protect
 exclude:
   - Gemfile
   - Gemfile.lock
