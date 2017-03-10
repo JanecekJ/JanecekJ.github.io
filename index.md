@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Jakub Janecek
+title: Jakub Janeček
 ---
-# Jakub Janecek - legenda, mytus, alebo obycajny chlapec?
+# Jakub Janeček - legenda, mýtus, alebo obyčajný chlapec?
 
-Tato stranka je o mne. Dozviete sa tu zakladne informacie o mne, mojich hobby, zivote a aktivitach.
-Ak vsak budete hladat poriadne, a citat medzi riadkami, dozviete sa viac ako by ste chceli.
+Táto stránka je o mne. Dozviete sa tu základné informácie o mne, mojich hobby, živote a aktivitách.
+Ak však budete hľadať poriadne, a čítať medzi riadkami, dozviete sa viac ako by ste chceli.
 
-Podpisany Lord Redhead
+Podpísaný Lord Redhead

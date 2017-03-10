@@ -1,3 +1,3 @@
-# Repozitar s osobnou strankou a informaciami o mne
+# Repozitár s osobnou stránkou a informáciami o mne
 
-Projekt na predmet webove publikovanie
+Projekt na predmet webové publikovanie

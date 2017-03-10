@@ -1,40 +1,40 @@
 [{
-	"nadpis":"Hubarska vasen",
-	"popis":"Velmi rad chodim do lesa. To ticho a pokoj, ktore tam moze clovek zazit je uzasne. Najradsej chodim do lesa na hriby.",
+	"nadpis":"Hubárska vášeň",
+	"popis":"Veľmi rád chodím do lesa. To ticho a pokoj, ktoré tam môže človek zažiť je úžasné. Najradšej chodím do lesa na hríby.",
 	"link":"hriby",
 	"prispevky":[{
-					"name":"Hrib smrekovy",
-					"popis":"Aj taketo kusky sa mi v roku 2015 podarilo najst.",
+					"name":"Hríb smrekový",
+					"popis":"Aj takéto kúsky sa mi v roku 2015 podarilo nájsť.",
 					"img":"/images/hriby.jpg",
 					"rating":"1"
 				},{
-					"name":"Ulovok",
-					"popis":"Nebolo toho strasne vela ale aj tak potesilo.",
+					"name":"Úlovok",
+					"popis":"Nebolo toho strašne veľa, ale aj tak potešilo.",
 					"img":"/images/ulovok.jpg",
 					"rating":"1"
 				}]
 },{
-	"nadpis":"Krasy prirody",
-	"popis":"Priroda je carovne miesto.",
+	"nadpis":"Krásy prírody",
+	"popis":"Príroda je čarovné miesto.",
 	"link":"priroda",
 	"prispevky":[{
-					"name":"Pekny vyhlad",
-					"popis":"Takyto pekny vyhlad sa da zazit v blizkosti Modry.",
+					"name":"Pekný výhľad",
+					"popis":"Takýto pekný výhľad sa dá zažit v blízkosti Modry.",
 					"img":"/images/vyhlad.jpg",
 					"rating":"1"
 				},{
-					"name":"Tulipany",
-					"popis":"Ked pride jar, avsetky kvety rozkvitnu.",
+					"name":"Tulipány",
+					"popis":"Keď príde jar, a všetky kvety rozkvitnú.",
 					"img":"/images/kvety.jpg",
 					"rating":"1"
 				}]
 },{
-	"nadpis":"Kulturne pamiatky slovenska",
-	"popis":"Na Slovenku mame vela hodnotnych, zaujimavych hradov, zamkov kastielov a inych historickych pamiatok. Obcas sa k nejakej vyberiem.",
+	"nadpis":"Kultúrne pamiatky Slovenska",
+	"popis":"Na Slovenku máme veľa hodnotných, zaujímavých hradov, zámkov kaštieľov a iných historických pamiatok. Občas sa k nejakej vyberiem.",
 	"link":"pamiatky",
 	"prispevky":[{
-					"name":"Mohyla Milara Rastislava Stefanika",
-					"popis":"Moja prva navsteva mohyly. Leto 2015.",
+					"name":"Mohyla Milana Rastislava Štefánika",
+					"popis":"Moja prvá návšteva mohyly. Leto 2015.",
 					"img":"/images/mohyla.jpg",
 					"rating":"1"
 				}]

@@ -13,13 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Jakub Janecek - moja stranka
+title: Jakub Janeček - moja stránka
 email: janecekk@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
- Tato stranka je o mne. Dozviete sa tu zakladne informacie o mne, mojich hobby, zivote a aktivitach.
- Ak vsak budete hladat poriadne, a citat medzi riadkami, dozviete sa viac ako by ste chceli.
+ Táto stránka je o mne. Dozviete sa tu základné informácie o mne, mojich hobby, živote a aktivitách.
+ Ak však budete hľadať poriadne, a čítať medzi riadkami, dozviete sa viac ako by ste chceli.
 
- Podpisany Lord Redhead
+ Podpísaný Lord Redhead
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:

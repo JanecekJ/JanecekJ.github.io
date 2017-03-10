@@ -5,12 +5,12 @@ title: O mne
 <center>
 	<img src="/images/profil.jpg" width="200">
 </center>
-## Osobne udaje
-Volam sa Jakub Janecek, narodil som sa na Slovensku a tu som aj vyrastol.
+## Osobné údaje
+Volám sa Jakub Janeček, narodil som sa na Slovensku a tu som aj vyrástol.
 
 ## Vzdelanie
-Do skolky som  chodil len chvilu. Chodil som na [Spojenu skolu sv. Vincenta de Paul](http://vdp.sk/start/), ktoru som uspesne dokoncil.
+Do škôlky som  chodil len chvíľu. Chodil som na [Spojenú školu sv. Vincenta de Paul](http://vdp.sk/start/), ktorú som úspešne dokončil.
 
-Na strednu skolu som sa vybral na gymnazium. Mojou volbou bolo [GLN](http://glnt.edupage.org). Boli to krasne casy sladkeho oddychu.
+Na strednú školu som sa vybral na gymnázium. Mojou voľbou bolo [GLN](http://glnt.edupage.org). Boli to krásne časy sladkého oddychu.
 
-A uz sa nachadzame v poslednej casti mojho vzdelania, ktora stale prebieha. Momentalne totiz studujem na [FIIT STU](http://fiit.stuba.sk), kde tento rok koncim bakalarske studium. Teda aspon dufam, ze ho skoncim :D .
+A už sa nachádzame v poslednej časti mojho vzdelania, ktorá stále prebieha. Momentálne totiž študujem na [FIIT STU](http://fiit.stuba.sk), kde tento rok končím bakalárske štúdium. Teda aspoň dúfam, že ho skončím.

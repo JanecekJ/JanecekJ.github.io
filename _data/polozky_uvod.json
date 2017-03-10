@@ -1,21 +1,21 @@
 [{
-	"nadpis":"O mne",
-  	"obsah":"Da sa toho o mne povedat vela.",
+	  "nadpis":"O mne",
+  	"obsah":"Dá sa toho o mne povedať veľa.",
   	"link":"/O_mne/"
 },{
-	"nadpis":"Ja, programovanie a pocitacove hry",
-  	"obsah":"Ked som bol maly dostal som NHL 2000. To bola hra.Programovat som zacal na strednej skole, a tam ma to natolko oslovilo ze som sa vybral na FIIT.",
-	"link":"/Programovanie/"
+    "nadpis":"Ja, programovanie a počítačove hry",
+  	"obsah":"Keď som bol malý dostal som NHL 2000. To bola hra. Programovať som začal na strednej škole, a tam ma to natoľko oslovilo, že som sa vybral na FIIT.",
+    "link":"/Programovanie/"
 },{
-	"nadpis":"Moje projekty",
-  	"obsah":"Tu si mozete pozriet niektore moje projekty.",
+    "nadpis":"Moje projekty",
+  	"obsah":"Tu si možete pozrieť niektoré moje projekty.",
   	"link":"/Projekty/"
 },{
-	"nadpis":"Priroda je moj kamarat",
-  	"obsah":"Rad chodim do lesa, do hor na tury a tak.",
+    "nadpis":"Príroda je môj kamarát",
+  	"obsah":"Rád chodím do lesa, do hôr na túry a tak.",
   	"link":"/Priroda/"
 },{
-	"nadpis":"Moj blog",
-  	"obsah":"Tu si mozte precitat niektore moje prispevky k temam aktualnym aj neaktualnym.",
+    "nadpis":"Môj blog",
+  	"obsah":"Tu si môžete prečítať niektoré moje príspevky k témam aktuálnym aj neaktuálnym.",
   	"link":"/Blog/"
 }]

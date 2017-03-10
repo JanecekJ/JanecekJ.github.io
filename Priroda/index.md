@@ -1,9 +1,9 @@
 ---
 layout: picture
-title: Priroda
+title: Príroda
 address: priroda
 ---
-# Ja a moje zazitky v prirode
-Priroda ma vzdy fascinovala. Mam rad logiku, a v prirode ma vzdy udivovalo ako je vsetko logicky usporiadane, aj ked to na prvy pohlad vyzera divoko
+# Ja a moje zážitky v prírode
+Príroda ma vždy fascinovala. Mám rád logiku, a v prírode ma vždy udivovalo ako je všetko logicky usporiadané, aj keď to na prvý pohľad vyzerá divoko.
 
-[Hubarska vasen](/Priroda#hriby) , [Krasy prirody](/Priroda#priroda) , [Kulturne pamiatky Slovenska](/Priroda#pamiatky)
+[Hubárska vášeň](/Priroda#hriby) , [Krásy prírody](/Priroda#priroda) , [Kultúrne pamiatky Slovenska](/Priroda#pamiatky)
