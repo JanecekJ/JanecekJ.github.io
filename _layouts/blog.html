@@ -2,8 +2,8 @@
 layout: basic
 title: Blog
 ---
-	<div class="container">
-		<div class="row">
+	<div class="center-block">
+		<div class="row text-center" style="background-color: rgb(242, 244, 88);margin-bottom: 20px">
 			<div class="col-lg-4 col-md-4 col-sm-4">
 				<h3>Názov</h3>	
 			</div>
@@ -15,7 +15,7 @@ title: Blog
 			</div>
 		</div>
 		{%for post in site.posts%}
-			<div class="row">
+			<div class="row text-center">
 				<div class="col-lg-4 col-md-4 col-sm-4">
 					<a href="{{post.url}}">{{post.title}}</a>
 				</div>
