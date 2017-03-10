@@ -2,38 +2,33 @@
 	"nadpis":"Webové publikovanie",
 	"popis":"Zadania z predmetu webové publikovanie. FIIT 6.semester",
 	"prispevky":[{
-					"name":"Zadania 1",
+					"name":"Zadanie 1",
 					"popis":"Statické sídlo pomocou jekyll a Git pages.",
-					"code":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png",
-					"doc":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png"
-				},{
-					"name":"Zadania 1",
-					"popis":"Statické sídlo pomocou jekyll a Git pages.",
-					"code":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png",
-					"doc":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png"
+					"code":"https://github.com/JanecekJ/JanecekJ.github.io",
+					"doc":""
 				}]
 },{
 	"nadpis":"Java",
 	"popis":"Rôzne projekty vypracované v jazyku Java. Jedná sa hlavne o zadania z rôznych predmetov na FIIT.",
 	"prispevky":[{
-					"name":"Zadania 1",
-					"popis":"Statické sídlo pomocou jekyll a Git pages.",
-					"code":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png",
-					"doc":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png"
+					"name":"Ukážka 1",
+					"popis":"Opis ukážky.",
+					"code":"",
+					"doc":""
 				}]
 },{
 	"nadpis":"C",
 	"popis":"Rôzne projekty vypracované v jazyku C. Jedná sa hlavne o zadania z rôznych predmetov na FIIT.",
 	"prispevky":[{
-					"name":"Zadania 1",
-					"popis":"Statické sídlo pomocou jekyll a Git pages.",
-					"code":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png",
-					"doc":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png"
+					"name":"Ukážka 2",
+					"popis":"Opis ukážky.",
+					"code":"",
+					"doc":""
 				},{
-					"name":"Zadania 1",
-					"popis":"Statické sídlo pomocou jekyll a Git pages.",
-					"code":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png",
-					"doc":"http://dota.wikia.com/wiki/File:Dota_2_Logo_only.png"
+					"name":"Ukážka 3",
+					"popis":"Opis ukážky.",
+					"code":"",
+					"doc":""
 				}]
 }
 ]

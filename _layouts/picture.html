@@ -13,9 +13,9 @@ layout: basic
 					<li class="media" style="margin-top:30px; margin-bottom:30px">
 						<div class="media-body">
 							<a name={{category.link}}></a>
-							<h4 class="media-heading" style="background-color: rgb(242, 244, 88);padding: 10px">
+							<h2 class="media-heading" style="background-color: rgb(242, 244, 88);padding: 10px">
 								{{category.nadpis}}
-							</h4>
+							</h2>
 							<p>{{category.popis}}</p>
 							<ul  class = "media-list" >	
 								{% for polozka in sorted %}
@@ -32,7 +32,7 @@ layout: basic
 											</a>
 										</div>
 										<div class="media-body">
-											<h4 class="media-heading">{{polozka.name}}</h4>
+											<h3 class="media-heading">{{polozka.name}}</h3>
 											<p>{{polozka.popis}}</p>			  
 										</div>
 									</li>
