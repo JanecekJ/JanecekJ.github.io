@@ -1,5 +1,5 @@
 ---
-layout: basic
+layout: projects
 title: Projekty
+address: projekty
 ---
-Toto je stranka s obsahom o mojich projektoch
