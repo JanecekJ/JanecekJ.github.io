@@ -52,7 +52,7 @@ layout: basic
 					{% for polozka in category.prispevky %}
 						{% if polozka.source != ""%}
 							<li>
-								<a href="{{polozka.source}}">{{polozka.source}}</a>
+								<a href="{{polozka.source}}" target="_blank">{{polozka.source}}</a>
 							</li>
 						{% endif %}
 					{% endfor %}

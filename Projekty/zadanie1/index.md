@@ -33,12 +33,12 @@ Ich využitie:
 ## 5 premenných
 Premenné využívam na viacerých stránkach. Buď ako parameter pre layout aby vedel ktorý dátový súbor má použiť 
 [picture.html](https://github.com/JanecekJ/JanecekJ.github.io/blob/master/_layouts/picture.html){:target="_blank"} + 
-[stránka o prírode](https://github.com/JanecekJ/JanecekJ.github.io/blob/master/Priroda/index.md){:target="_blank"} 
+[stránka o prírode](https://github.com/JanecekJ/JanecekJ.github.io/blob/master/priroda/index.md){:target="_blank"} 
 (počet premenných 1).
 
 Alebo priamo na posunutie údajov aby sa v prípade potreby dali ľahko zmeniť s inou hodnotou 
 [profil.html](https://github.com/JanecekJ/JanecekJ.github.io/blob/master/_layouts/profil.html){:target="_blank"} + 
-[stránka o mne](https://github.com/JanecekJ/JanecekJ.github.io/blob/master/O_mne/index.md){:target="_blank"} 
+[stránka o mne](https://github.com/JanecekJ/JanecekJ.github.io/blob/master/o_mne/index.md){:target="_blank"} 
 (počet premenných 3). 
 
 Tak isto aj pri
@@ -69,17 +69,17 @@ Pluginy som použil 3.
 Prvým je **jemoji**. Ten konvertuje emoji z textovej formy : smile :  : +1 : na obrázky :smile: :+1: . Funguje aj na GitHub pages.
 
 ### 2.
-Druhým je **jekyll-email-protect**. Ten zabraňuje crawler botom získať emailovú adresu zo stránky.
+Druhým je **jekyll-email-protect**. Ten zabraňuje crawler botom získať emailovú adresu zo stránky. Footer -> Mailový kontakt
 
-**pokus@gmail.com** == **{{'pokus@gmail.com' | encode_email}}**. 
+**pokus@gmail.com** == **%70%6F%6B%75%73@%67%6D%61%69%6C.%63%6F%6D**. 
 
 Nefunguje na GitHub pages.
 
 ### 3.
-Tretím je **liquid-reading-time**. Ten pomocou algoritmu odhadne ako dlho bude trvať préčítanie textu.
+Tretím je **liquid-reading-time**. Ten pomocou algoritmu odhadne ako dlho bude trvať préčítanie textu. Stránka Blog
 
 Text: Ahoj ako sa máš?
 
-Trvanie v minútach: {{'Ahoj ako sa máš?' | reading_time}}
+Trvanie v minútach: 1
 
 Nefunguje na GitHub pages.
