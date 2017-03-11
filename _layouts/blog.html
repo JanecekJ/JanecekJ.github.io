@@ -29,7 +29,11 @@ title: Blog
 					<p >{{post.categories | join:", "}}</p>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-4">
-					<p >{{post.content | reading_time}}</p>
+					{% assign data = {{post.content}} %}
+					{% assign time = {{post.content | reading_time}} %}
+					{% if data != time %}
+						<p >{{time}}</p>
+					{% endif %}
 				</div>
 			</div>
 		{%endfor%}
