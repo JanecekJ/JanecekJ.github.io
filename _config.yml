@@ -32,6 +32,7 @@ gems:
   - jekyll-feed
   - jemoji
   - jekyll-email-protect
+  - liquid_reading_time
 exclude:
   - Gemfile
   - Gemfile.lock

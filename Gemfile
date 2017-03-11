@@ -29,3 +29,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jemoji'
 
 gem 'jekyll-email-protect'
+
+gem 'liquid_reading_time'
