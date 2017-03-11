@@ -1,13 +1,10 @@
 ---
-layout: basic
+layout: profil
 title: O mne
+meno: Jakub Janeček
+country: Slovensko
+age: 21
 ---
-<center>
-	<img src="/images/profil.jpg" width="200">
-</center>
-## Osobné údaje
-Volám sa Jakub Janeček, narodil som sa na Slovensku a tu som aj vyrástol.
-
 ## Vzdelanie
 Do škôlky som  chodil len chvíľu. Chodil som na [Spojenú školu sv. Vincenta de Paul](http://vdp.sk/start/), ktorú som úspešne dokončil.
 
