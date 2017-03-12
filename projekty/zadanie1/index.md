@@ -10,6 +10,9 @@ V rámci developerského profilu vytvorte sekciu Webové publikovanie, kde budet
 Využite pritom technológie Git + GitHub Pages + Jekyll + Markdown. Využite potenciál statického generátora Jekyll a jeho templatovacích možností.
 
 # Riešenie
+
+[Kód na GitHube](https://github.com/JanecekJ/JanecekJ.github.io){:target="_balnk"}
+
 Zadanie som vyvíjal na lokálnej verzií pomocou Jekyll. Následne som zmeny zverejňoval na GitHube. Na vizuálnu časť stránky bol použitý bootstrap.
 
 ## 5 podstránok a využitie layoutov
