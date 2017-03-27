@@ -6,6 +6,11 @@
 					"popis":"Statické sídlo pomocou jekyll a Git pages.",
 					"code":"https://github.com/JanecekJ/JanecekJ.github.io",
 					"doc":"/projekty/zadanie1/"
+				},{
+					"name":"Zadanie 2",
+					"popis":"Transformácia vybraného dokumentu do formátu DocBook.",
+					"code":"",
+					"doc":"/projekty/zadanie2/"
 				}]
 },{
 	"nadpis":"Java",

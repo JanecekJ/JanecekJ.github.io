@@ -21,7 +21,9 @@ layout: basic
 							 	</div>
 							  	<div class="panel-body">
 							    	<p>{{polozka.popis}}</p>
+									{%if polozka.code != "" %}
 							    	<a class="btn btn-primary" href="{{polozka.code}}">Kód</a>
+									{% endif %}
 							    	<a class="btn btn-primary" href="{{polozka.doc}}">Dokumentácia</a>
 							  	</div>
 							</div>
