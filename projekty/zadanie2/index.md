@@ -6,8 +6,8 @@ categories: Webové publikovanie
 Predmetom 2. zadania je spracovanie vybraného dokumentu (ideálne bakalárskeho projektu) z pôvodného ľubovoľného (Word, OpenOffice, LaTeX, …) formátu do formátu DocBook a vygenerovanie cieľového tvaru v PDF. Výsledný dokument bude mať rozsah minimálne 10 a maximálne 15 strán. Do rozsahu sa nezapočítavajú úvodné strany (obsah, zoznamy obrázkov a tabuliek), použitá literatúra a prílohy.
 
 # Riešenie
-
-Vypracované zadanie obsahuje všetky požadované kontrolné konštrukcie. 
+Ako riešenie zadania som sa rozhodol transformovať bakalársku prácu do formátu DocBook.
+Požiadavky na zadanie boli, aby sme použili všetky požadované kontrolné konštrukcie. 
 
 + Text je členený na kapitoly a podkapitoly. Obsahuje tiež prílohu a generovaný obsah (obsah, zoznam obrázkov, zoznam tabuliek)
 + Na členenie textu som použil odrážky aj číslovanie, pričom pri číslovaní som zároveň využil aj zvýraznenie textu
@@ -17,7 +17,7 @@ Vypracované zadanie obsahuje všetky požadované kontrolné konštrukcie.
 + V dokumente sa nachádzajú obrázky a tabulky, na ktoré sa odkazujem v texte. Na začiatku dokumentu sa nachádzajú zoznamy tabuliek a obrázkov.
 + Na konci dokumentu sa nachádza viacúrovňový register pojmov.
 
-Kapitoly a podkapitoly som vytváral pomocou tagov:
+# Kapitoly a podkapitoly som vytváral pomocou tagov:
 ```xml
 <chapter>
 ...
@@ -26,14 +26,14 @@ Kapitoly a podkapitoly som vytváral pomocou tagov:
 </chapter>
 ```
 
-Na vygenerovanie zoznamu obrazkov a tabuliek som pozmenil subor **thesis.xsl** :
+# Na vygenerovanie zoznamu obrázkov a tabuliek som pozmenil súbor **thesis.xsl** :
 ```xml
 <xsl:param name="generate.toc">
 book      title,toc,figure,table
 </xsl:param>
 ```
 
-Na vytvorenie číslovania so zvýraznením som použil:
+# Na vytvorenie číslovania so zvýraznením som použil:
 ```xml
 <orderedlist>
 	<listitem>
@@ -64,14 +64,14 @@ Na vytvorenie číslovania so zvýraznením som použil:
 </orderedlist>
 ```
 
-Odkaz na podkapitolu:
+# Odkaz na podkapitolu:
 ```xml
 Tomu prečo je tento spôsob spracovania užitočný sa venujme v <xref linkend='variance'/>
 ...
 <section id='variance'>
 ```
 
-Obrázok s poznámkou pod čiarou:
+# Obrázok s poznámkou pod čiarou:
 ```xml
 <figure id="imgBiasVariance">
 	<title>
@@ -94,7 +94,7 @@ Obrázok s poznámkou pod čiarou:
 </figure>
 ```
 
-Tabuľka:
+# Tabuľka:
 ```xml
 <table id='tabulkaBagging' frame='all'><title>Tréningové podmnožiny pre bagging</title>
 	<tgroup cols='2' align='left' colsep='1' rowsep='1'>
@@ -132,7 +132,7 @@ Tabuľka:
 </table>
 ```
 
-Položka v použitej literatúre:
+# Položka v použitej literatúre:
 ```xml
 <biblioentry id="Breiman1996">
   	<authorgroup>
@@ -150,7 +150,7 @@ Položka v použitej literatúre:
 </biblioentry>
 ```
 
-Zoznam pojmov 
+# Zoznam pojmov: 
 ```xml
 <!-- prvá uroveň -->
 <envar>Klasifikácia</envar><indexterm><primary>Klasifikácia</primary></indexterm>
