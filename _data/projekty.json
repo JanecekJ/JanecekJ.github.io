@@ -9,8 +9,13 @@
 				},{
 					"name":"Zadanie 2",
 					"popis":"Transformácia vybraného dokumentu do formátu DocBook.",
-					"code":"",
+					"code":"/projekty/zadanie2/kod/zadanie3.zip",
 					"doc":"/projekty/zadanie2/"
+				},{
+					"name":"Zadanie 3",
+					"popis":"XML prezentácia.",
+					"code":"",
+					"doc":"/projekty/zadanie3/"
 				}]
 },{
 	"nadpis":"Java",
