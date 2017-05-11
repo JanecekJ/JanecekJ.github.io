@@ -8,156 +8,87 @@ Analyzujte možnosti zápisu jednoduchej prezentácie v jazyku XML. Identifikujt
 Navrhnite a vytvorte XSLT šablóny pre konverziu prezentácie z XML do XHTML+CSS a pre konverziu prezentácie z XML do PDF. Klaďte dôraz na znovupoužitie jednotlivých šablon pre viaceré výstupné formáty. Umožnite zadávanie parametrov transformácií.
 
 # Riešenie
-Ako riešenie zadania som sa rozhodol transformovať bakalársku prácu do formátu DocBook.
-Požiadavky na zadanie boli, aby sme použili všetky požadované kontrolné konštrukcie. 
++ Na opis dokumentu som sa rozhodol použiť variant XML schémy. Využil som ju na definíciu elementov, ktoré sú stavebnými prvkami XML prezentácie. Definoval som komplexné typy, ale použil som aj preddefinované typy. V komentároch som vysvetlil význam jednotlivých elementov pre prezentáciu.
 
-+ Text je členený na kapitoly a podkapitoly. Obsahuje tiež prílohu a generovaný obsah (obsah, zoznam obrázkov, zoznam tabuliek)
-+ Na členenie textu som použil odrážky aj číslovanie, pričom pri číslovaní som zároveň využil aj zvýraznenie textu
-+ V texte sa odkazujem na ďalšie časti dokumentu, konkrétne podkapitoly
-+ Poznámka pod čiarou je použitá pri niektorých obrázkoch, kde pridáva menej zaujímavé informácie.
-+ Zoznam použitej literatúry sa nachádza na konci dokumentu, a citácie sa nachádzajú na viacerých miestach dokumentu.
-+ V dokumente sa nachádzajú obrázky a tabulky, na ktoré sa odkazujem v texte. Na začiatku dokumentu sa nachádzajú zoznamy tabuliek a obrázkov.
-+ Na konci dokumentu sa nachádza viacúrovňový register pojmov.
++ Následne som vytvoril XML dokument reprezentujúci prezentáciu, ktorý využíval prvky zadefinované pomocou XML schémy. Prezentácia demonštruje možnosti definície. Ako tému prezentácie som si zvolil počítačovú hru, ktorú radi hráme s kamarátmi.
 
-# Kapitoly a podkapitoly som vytváral pomocou tagov:
++ Na účel XSLT transformácií som vytvoril 3 súbory:
+	- Prvým súborom je **basic.xsl**. Obsahuje zákaldné transformácie a šablony, z ktorých niektoré sa využívajú aj pri transformácií XML prezentácie do PDF aj HTML.
+	- Druhým je **html.xsl**. Tento súbor slúži na transformáciu XML prezentáciu do HTML formátu. Každý slide prezentácie sa vygeneruje ako samostatný HTML súbor. Jednotlivé súbory sú medzi sebou prepojené odkazmi. Každý tento súbor využíva CSS stylesheet, ktorý definuje vizuálnu stránku prezentácie vo formáte HTML.
+	- Tretím je **pdf.xsl**. Posledný súbor s transformáciami definuje šablony na vytvorenie **fo** súboru, ktorý je následne transformovaný na PDF prezentáciu.
+
++ Snažil som sa dosiahnuť čo najväčšiu podobnosť medzi HTML a PDF formátmi prezetácií.
+
++ Isté parametre transformácie je možné zadať aj priamo pri transformácií. Konkrétne sa jedná o číslovanie slidov a zmena fontu prezentácie.
+
++ Na transformáciu XML do HTML a FO som využil knižnicu **Saxon**, konkrétne *java -jar C:\Saxon\saxon9he.jar*.
+
++ Na transformáciu FO do PDF som využil DocBook, konkrétne *xep.bat*.
+
+# Ukážky transformácií
+### Načítanie externých parametrov a bat súbor pre HTML transformáciu:
+```bat
+@ECHO OFF
+
+SET /A c=1
+SET f="Arial" 
+
+:Y1
+IF "%1"=="" GOTO :END
+IF "%1"=="cislovanie-0" SET /A c=0
+IF "%1"=="font-times" SET f="Times New Roman"
+
+SHIFT
+GOTO :Y1
+
+:END
+call java -jar C:\Saxon\saxon9he.jar -s:prezentacia.xml -xsl:html.xsl cislovanie=%c% font=%f%
+```
 ```xml
-<chapter>
-...
-<section>...</section>
-...
-</chapter>
+<xsl:param name="cislovanie" select="cislovanie"/>
+<xsl:param name="font" select="font"/>
 ```
 
-# Na vygenerovanie zoznamu obrázkov a tabuliek som pozmenil súbor **thesis.xsl** :
+### Šablona na vytvorenie popisu obrázka zo základných transformácií :
 ```xml
-<xsl:param name="generate.toc">
-book      title,toc,figure,table
-</xsl:param>
+<!-- Template pre nájdenie čísla obrázka v prezentácií -->
+<xsl:template name="obr-cislo">
+	<!-- zistí číslo obrázka -->
+	<xsl:variable name="cislo" select="count(preceding::*//obrazok)+1"/>
+ 	<!-- nájde popis obrázka podľa toho o aký slide sa jedná -->
+ 	<xsl:if test=".[x:obrazok]">
+		<xsl:variable name="popis" select="x:obrazok/x:popis"/>
+		Obr.<xsl:value-of select="$cislo"/> : <xsl:value-of select="$popis"/>
+	</xsl:if>
+	<xsl:if test=".[x:mix]">
+		<xsl:variable name="popis" select="x:mix/x:obrazok/x:popis"/>
+		Obr.<xsl:value-of select="$cislo"/> : <xsl:value-of select="$popis"/>
+	</xsl:if>
+</xsl:template>
 ```
 
-# Na vytvorenie číslovania so zvýraznením som použil:
+### Šablona pre vytvorenie automaticky generovaného slidu so zhrnutím pre HTML:
 ```xml
-<orderedlist>
-	<listitem>
-		<para>
-			<emphasis role='bold' >čistenie dát</emphasis>
-		</para>
-	</listitem>
-	<listitem>
-		<para>
-			<emphasis role='bold' >normalizácia</emphasis>
-		</para>
-	</listitem>
-	<listitem>
-		<para>
-			<emphasis role='bold' >transformácia</emphasis>
-		</para>
-	</listitem>
-	<listitem>
-		<para>
-			<emphasis role='bold' >extrakcia atribútov</emphasis>
-		</para>
-	</listitem>
-	<listitem>
-		<para>
-			<emphasis role='bold' >selekcia atribútov</emphasis>
-		</para>
-	</listitem>
-</orderedlist>
-```
-
-# Odkaz na podkapitolu:
-```xml
-Tomu prečo je tento spôsob spracovania užitočný sa venujme v <xref linkend='variance'/>
-...
-<section id='variance'>
-```
-
-# Obrázok s poznámkou pod čiarou:
-```xml
-<figure id="imgBiasVariance">
-	<title>
-		Vzťah medzi bias, variance a komplexnosťou modelu 
-		<footnote>
-			<para>Čím komplikovanejší model, tým väčšia variancia.
-			 Čím jednoduchší model, tým väčšia vyvhýlenosť. Treba nájsť správny pomer.</para>
-		</footnote>
-	</title>
-	<mediaobject>
-	  	<imageobject>
-	   	 	<imagedata width='10cm' fileref="images/biasvariance.png"/>
-	  	</imageobject>
-	  	<textobject>
-	  		<phrase>Čím komplikovanejší model, tým väčšia variancia.
-	  		 Čím jednoduchší model, tým väčšia vyvhýlenosť. Treba nájsť správny pomer.</phrase>
-	  	</textobject>
-	  	<ulink url="http://scott.fortmann-roe.com/docs/BiasVariance.html"/>	
-	</mediaobject>
-</figure>
-```
-
-# Tabuľka:
-```xml
-<table id='tabulkaBagging' frame='all'><title>Tréningové podmnožiny pre bagging</title>
-	<tgroup cols='2' align='left' colsep='1' rowsep='1'>
-		<colspec colname='mnozina'/>
-		<colspec colname='prvky' />
-		<thead>
-			<row>
-	  			<entry>Množina</entry>
-	  			<entry>Pozorovanie v množine</entry>
-			</row>
-		</thead>
-		<tbody>
-			<row>
-			  	<entry>T (pôvodná množina)</entry>
-			  	<entry>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</entry>
-			</row>
-			<row>
-			  	<entry>T1</entry>
-			  	<entry>1, 2, 2, 4, 5, 6, 6, 8, 9, 10</entry>
-			</row>
-			<row>
-			  	<entry>T2</entry>
-			  	<entry>1, 1, 3, 4, 5, 5, 7, 8, 10, 10</entry>
-			</row>
-			<row>
-			  	<entry>T3</entry>
-			  	<entry>3, 3, 3, 4, 5, 6, 7, 7, 9, 10</entry>
-			</row>
-			<row>
-			  	<entry>T4</entry>
-			  	<entry>1, 2, 4, 4, 5, 6, 7, 8, 9, 9</entry>
-			</row>
-		</tbody>
-	</tgroup>
-</table>
-```
-
-# Položka v použitej literatúre:
-```xml
-<biblioentry id="Breiman1996">
-  	<authorgroup>
-    	<author><firstname>Leo</firstname><surname>Breiman</surname></author>
-  	</authorgroup>
-  	<isbn>1573-0565</isbn>
-  	<copyright>
-  		<year>1996</year>
-  	</copyright>
-  	<publisher>
-   		<publishername>Machine Learning</publishername>
-  	</publisher>
-  	<title>Bagging predictors</title>
-  	<pagenums>123-140</pagenums>
-</biblioentry>
-```
-
-# Zoznam pojmov: 
-```xml
-<!-- prvá uroveň -->
-<envar>Klasifikácia</envar><indexterm><primary>Klasifikácia</primary></indexterm>
-<!-- druhá uroveň -->
-<envar>Predpríprava dát</envar><indexterm><primary>Klasifikácia</primary><secondary>Predpríprava dát</secondary></indexterm>
-<!-- vygenerovanie zoznamu -->
-<index></index>
+<!-- template pre spracovanie slidu so zhrnutím -->
+<xsl:template name="zhrnutie">
+	<div class="nadpis">
+		<center>
+			<h1>Zhrnutie</h1>
+		</center>
+	</div>
+	<div class="obsah">
+		<div class="text">
+			<p>
+				Kontakt: <xsl:value-of select="//x:metadata/x:email"/>
+			</p>
+			<ul>
+			<xsl:for-each select="//x:key">
+				<li>
+					<xsl:apply-templates/>
+				</li>
+			</xsl:for-each>
+			</ul>
+		</div>
+	</div>
+</xsl:template>
 ```
