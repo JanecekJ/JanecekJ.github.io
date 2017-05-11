@@ -10,16 +10,41 @@ Navrhnite a vytvorte XSLT šablóny pre konverziu prezentácie z XML do XHTML+CS
 # Riešenie
 + Na opis dokumentu som sa rozhodol použiť variant XML schémy. Využil som ju na definíciu elementov, ktoré sú stavebnými prvkami XML prezentácie. Definoval som komplexné typy, ale použil som aj preddefinované typy. V komentároch som vysvetlil význam jednotlivých elementov pre prezentáciu.
 
+```xml
+<!-- Bežný slide prezentácie -->
+<xs:complexType name="Slide">
+    <!-- obsahuje postupnosť atribútov -->
+    <xs:sequence>
+    	<!-- nadpis slidu -->
+  		<xs:element name="nadpis" type="xs:string"/>
+  		<!-- jeden z možných obsahov -->
+  		<xs:choice>
+	    	<xs:element name="raw-text" type="Raw-text"/>
+	    	<xs:element name="text" type="Text"/>
+	      	<xs:element name="obrazok" type="Picture"/>
+	      	<xs:element name="mix" type="Mix"/>
+	      	<xs:element name="tabulka" type="Table"/>
+    	</xs:choice>
+	</xs:sequence>
+</xs:complexType>
+```
+
 + Následne som vytvoril XML dokument reprezentujúci prezentáciu, ktorý využíval prvky zadefinované pomocou XML schémy. Prezentácia demonštruje možnosti definície. Ako tému prezentácie som si zvolil počítačovú hru, ktorú radi hráme s kamarátmi.
 
 + Na účel XSLT transformácií som vytvoril 3 súbory:
-	- Prvým súborom je **basic.xsl**. Obsahuje zákaldné transformácie a šablony, z ktorých niektoré sa využívajú aj pri transformácií XML prezentácie do PDF aj HTML.
-	- Druhým je **html.xsl**. Tento súbor slúži na transformáciu XML prezentáciu do HTML formátu. Každý slide prezentácie sa vygeneruje ako samostatný HTML súbor. Jednotlivé súbory sú medzi sebou prepojené odkazmi. Každý tento súbor využíva CSS stylesheet, ktorý definuje vizuálnu stránku prezentácie vo formáte HTML.
-	- Tretím je **pdf.xsl**. Posledný súbor s transformáciami definuje šablony na vytvorenie **fo** súboru, ktorý je následne transformovaný na PDF prezentáciu.
 
-+ Snažil som sa dosiahnuť čo najväčšiu podobnosť medzi HTML a PDF formátmi prezetácií.
 
-+ Isté parametre transformácie je možné zadať aj priamo pri transformácií. Konkrétne sa jedná o číslovanie slidov a zmena fontu prezentácie.
+	- Prvým súborom je **basic.xsl**. Obsahuje zákaldné transformácie a šablony, z ktorých niektoré sa využívajú pri transformácií XML prezentácie do PDF aj HTML.
+
+
+	- Druhým je **html.xsl**. Tento súbor slúži na transformáciu XML prezentáciu do HTML formátu. Každý slide prezentácie sa vygeneruje ako samostatný HTML súbor. Jednotlivé súbory sú medzi sebou prepojené odkazmi. Každý tento súbor využíva CSS stylesheet, ktorý definuje vizuálnu stránku prezentácie vo formáte HTML. Pri týchto transformáciach sa využívajú *html* tagy, najčastejšie `<div></div>`.
+
+
+	- Tretím je **pdf.xsl**. Posledný súbor s transformáciami definuje šablony na vytvorenie **fo** súboru, ktorý je následne transformovaný na PDF prezentáciu. Tu sa využívajú *fo* tagy, ako napr. `<fo:block></fo:block>`.
+
++ Snažil som sa dosiahnuť čo najväčšiu podobnosť medzi HTML a PDF formátmi prezetácií. Taktiež som sa snažil minimalizovať redundanciu.
+
++ Isté parametre transformácie je možné zadať aj priamo pri transformácií. Konkrétne sa jedná o číslovanie slidov a zmenu fontu prezentácie. Automatické číslovanie sa dá vypnúť a prednastavený font Arial sa dá zmeniť na Times new roman.
 
 + Na transformáciu XML do HTML a FO som využil knižnicu **Saxon**, konkrétne *java -jar C:\Saxon\saxon9he.jar*.
 
